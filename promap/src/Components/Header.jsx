@@ -8,7 +8,7 @@ const Header = () => {
       {/* Options */}
       <div className="flex items-center gap-10">
 
-        <Link><FaHome className='text-white text-2xl' /></Link>
+        <Link to="/"><FaHome className='text-white text-2xl' /></Link>
 
         {/* Search Input */}
         <div className="mr-4">
