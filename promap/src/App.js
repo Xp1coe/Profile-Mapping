@@ -1,10 +1,17 @@
 import Header from "./Components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AdminLogin from "./Components/AdminLogin";
 
 function App() {
   return (
-    <>
-      <Header />
-    </>
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/admin" element={<AdminLogin />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
