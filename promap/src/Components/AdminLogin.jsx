@@ -31,7 +31,7 @@ const AdminLogin = () => {
         </button>
       ) : (
         <form onSubmit={handleSubmit} className="w-96 mx-auto border border-black p-4 bg-black">
-          <h1 className='text-black bg-white font-mono'>Fill The Profile</h1>
+          <h1 className='text-black bg-white font-mono text-2xl'>FILL THE PROFILE</h1>
           <div className="my-4">
             <input type="text" placeholder="Name" className="px-4 py-2 w-full rounded-md bg-transparent" />
           </div>
