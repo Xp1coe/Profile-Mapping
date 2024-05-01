@@ -64,6 +64,17 @@ const AdminLogin = () => {
     setShowForm(false);
   };
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3001/Profile/${id}`);
+      // Fetch profiles again to update the list
+      const response = await axios.get('http://localhost:3001/Profile');
+      setProfiles(response.data);
+    } catch (error) {
+      console.error('Error deleting profile:', error);
+    }
+  };
+
   return (
     <div className='text-center'>
       <h1>Admin Panel</h1>
@@ -125,7 +136,10 @@ const AdminLogin = () => {
             <p>{profile.achievements}</p>
             <p>{profile.gender}</p>
             <p>{profile.age}</p>
-           
+            <div className="flex justify-around mt-4">
+              <button className="text-red-500" onClick={() => handleDelete(profile.id)}>Delete</button>
+              <button className="text-blue-500">Edit</button>
+            </div>
           </div>
         ))}
       </div>
