@@ -92,7 +92,7 @@ const AdminLogin = () => {
             <input type="text" name="name" placeholder="Name" className="px-4 text-white py-2 w-full rounded-md bg-transparent" onChange={handleChange} required />
           </div>
           <div className="my-4">
-            <input type="text" name="description" placeholder="Description" className="px-4 text-white py-2 w-full rounded-md bg-transparent" onChange={handleChange} required />
+            <textarea type="text" name="description" placeholder="Description" className="px-4 text-white py-2 w-full rounded-md bg-transparent" onChange={handleChange} required />
           </div>
           <div className="my-4">
             <input type="text" name="address" placeholder="Address" className="px-4 py-2 text-white w-full rounded-md bg-transparent" onChange={handleChange} required />
@@ -104,7 +104,7 @@ const AdminLogin = () => {
             <input type="text" name="gender" placeholder="Gender" className="px-4 py-2 text-white w-full rounded-md bg-transparent" onChange={handleChange} required />
           </div>
           <div className="my-4">
-            <input type="file" name="photo" accept="image/*" className="px-4 text-white py-2 w-full rounded-md bg-transparent" onChange={handleChange} required />
+            <input type="file" name="photo" accept="image/*" className="px-4 text-white py-2 rounded-md bg-transparent" onChange={handleChange} required />
           </div>
           <div className="my-4">
             <input type="number" name="age" placeholder="Age" className="px-4 text-white py-2 w-full rounded-md bg-transparent" onChange={handleChange} required />
@@ -128,17 +128,20 @@ const AdminLogin = () => {
       )}
       <div className="flex flex-wrap mt-8">
         {profiles.map(profile => (
-          <div key={profile.id} className="bg-white shadow-md p-4 m-4 w-72 rounded-md border border-black  ">
-            <h2 className="text-lg font-bold">{profile.name}</h2>
-            {profile.photo && <img src={profile.photo} alt={profile.name} className="w-10 h-32 mx-auto mt-4 rounded-full" />}
-            <p>{profile.description}</p>
-            <p>{profile.address}</p>
-            <p>{profile.achievements}</p>
-            <p>{profile.gender}</p>
-            <p>{profile.age}</p>
+          <div key={profile.id} className="bg-white shadow-md p-4 m-4 w-72 rounded-md border border-black flex flex-col justify-between">
+            <div>
+              <h2 className="text-lg font-bold">{profile.name}</h2>
+              {profile.photo && <img src={profile.photo} alt={profile.name} className="w-24 h-32 mx-auto mt-4 rounded-md" />}
+              <br />
+              <p>Description: {profile.description}</p>
+              <p>Address: {profile.address}</p>
+              <p>Achievements: {profile.achievements}</p>
+              <p>Gender: {profile.gender}</p>
+              <p>Age: {profile.age}</p>
+            </div>
             <div className="flex justify-around mt-4">
-              <button className="text-red-500" onClick={() => handleDelete(profile.id)}>Delete</button>
-              <button className="text-blue-500">Edit</button>
+              <button className="bg-red-500 p-2 text-white" onClick={() => handleDelete(profile.id)}>Delete</button>
+              <button className="bg-blue-500 p-2 text-white">Edit</button>
             </div>
           </div>
         ))}
