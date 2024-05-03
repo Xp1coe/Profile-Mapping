@@ -36,7 +36,7 @@ const Maps = ({ google }) => {
 
   return (
     <div>
-      <h1>Google Maps</h1>
+      <h1 className='font-mono text-center text-2xl mx-2'>GOOGLE MAPS</h1>
       <Map
         google={google}
         zoom={8}
