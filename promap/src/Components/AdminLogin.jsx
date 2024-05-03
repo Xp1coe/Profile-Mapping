@@ -114,7 +114,7 @@ const AdminLogin = () => {
 
   return (
     <div className='text-center'>
-      <h1>Admin Panel</h1>
+      <h1 className='font-mono text-2xl mx-2'>ADMIN PANEL</h1>
       {!showForm ? (
         <button
           className="bg-blue-500 hover:bg-blue-700 my-5 text-white text-center font-bold py-2 px-4 rounded"
@@ -175,7 +175,7 @@ const AdminLogin = () => {
       )}
       <div className="flex flex-wrap justify-center">
         {profiles.map(profile => (
-          <div key={profile.id} className="bg-white shadow-md p-4 m-4 w-72 rounded-md border border-black flex flex-col justify-between">
+          <div key={profile.id} className=" bg-slate-700 text-white shadow-md p-4 m-4 w-72 rounded-md border border-black flex flex-col justify-between">
             <div>
               <h2 className="text-lg font-bold">{profile.name}</h2>
               {profile.photo && <img src={profile.photo} alt={profile.name} className="w-24 h-32 mx-auto mt-4 rounded-md" />}
