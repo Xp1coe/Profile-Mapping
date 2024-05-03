@@ -173,7 +173,7 @@ const AdminLogin = () => {
           </div>
         </form>
       )}
-      <div className="flex flex-wrap mt-8">
+      <div className="flex flex-wrap justify-center">
         {profiles.map(profile => (
           <div key={profile.id} className="bg-white shadow-md p-4 m-4 w-72 rounded-md border border-black flex flex-col justify-between">
             <div>
@@ -186,8 +186,8 @@ const AdminLogin = () => {
               <p>Age: {profile.age}</p>
             </div>
             <div className="flex justify-around mt-4">
-              <button className="bg-red-500 p-2 text-white" onClick={() => handleDelete(profile.id)}>Delete</button>
-              <button className="bg-blue-500 p-2 text-white" onClick={() => handleEditProfile(profile.id)}>Edit</button>
+              <button className="bg-red-500 p-2 text-white rounded-lg hover:bg-red-700" onClick={() => handleDelete(profile.id)}>Delete</button>
+              <button className="bg-blue-500 p-2 text-white rounded-lg hover:bg-blue-600" onClick={() => handleEditProfile(profile.id)}>Edit</button>
             </div>
           </div>
         ))}

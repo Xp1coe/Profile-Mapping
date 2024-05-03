@@ -20,7 +20,7 @@ const Info = () => {
 
   return (
     <div className="text-center">
-      <h1 className='font-mono text-3xl py-1'>Profile Details</h1>
+      <h1 className='font-mono text-3xl py-1'>PROFILE DETAILS</h1>
       {profile ? (
         <div className="bg-black shadow-md p-4 m-4 w-auto rounded-md border border-black text-white">
           <div className="flex flex-col justify-between h-full">
@@ -30,6 +30,7 @@ const Info = () => {
               <br />
               <hr className='border border-white m-2'/>
               <p>Description: {profile.description}</p>
+              <hr className='border border-white m-2'/>
               <p>Address: {profile.address}</p>
               <p>Achievements: {profile.achievements}</p>
               <p>Gender: {profile.gender}</p>
