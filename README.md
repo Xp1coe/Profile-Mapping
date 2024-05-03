@@ -1,6 +1,9 @@
 # Profile-Mapping
 It Pinpoints to the Location of the Profile User
 
+Packages and Languages Used:
+React JS, Tailwind CSS, RestFUL API, Google Maps React , NPM Packages , React icons.
+
 Steps to Start the Project:
 Step1: Clone the Repository and open in the Visual Studio Code
 Step2: Open Terminal and Put the Following commands 
